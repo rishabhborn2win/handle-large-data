@@ -1,0 +1,26 @@
+{
+  "name": "handle-large-data",
+  "version": "1.0.0",
+  "description": "This project basically deals with with how to handle a large amount of data",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rishabhborn2win/handle-large-data.git"
+  },
+  "author": "RISHABH MISHRA",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/rishabhborn2win/handle-large-data/issues"
+  },
+  "homepage": "https://github.com/rishabhborn2win/handle-large-data#readme",
+  "dependencies": {
+    "config": "^3.3.6",
+    "cors": "^2.8.5",
+    "express": "^4.17.1",
+    "mongoose": "^5.13.3",
+    "morgan": "^1.10.0"
+  }
+}
