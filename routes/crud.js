@@ -70,7 +70,7 @@ router.get("/train_details/:train_number", (req, res) => {
       sourceStationLon = virtualRes[0].running_route[0][1];
 
       virtualRes[0].schedule.map((station, index) => {
-        station.distance = getDistanceFromLatLonInKm(virtualRes[0].running_route[index][0], virtualRes[0].running_route[index][1], sourceStationLat, sourceStationLon);
+        station.distance = getDistanceFromLatLonInKm( virtualRes[0].running_route[index][1], virtualRes[0].running_route[index][0], sourceStationLon, sourceStationLat);
         console.log(station.distance)
          
           //checking weather the train stops at the staion or not
