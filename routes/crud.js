@@ -62,6 +62,9 @@ router.get("/train_details/:train_number", (req, res) => {
   ])
     .then((virtualRes) => {
       console.log("Result Found");
+      if(virtualRes.length === 0){
+        return res.send("No Trains Found!");
+      }
       //add the field of the stopping station
       var stoppingStations = [], sourceStationLat, sourceStationLon;
 
@@ -70,6 +73,8 @@ router.get("/train_details/:train_number", (req, res) => {
       sourceStationLon = virtualRes[0].running_route[0][1];
 
       virtualRes[0].schedule.map((station, index) => {
+
+        if(virtualRes[0].running_route[index])
         station.distance = getDistanceFromLatLonInKm( virtualRes[0].running_route[index][1], virtualRes[0].running_route[index][0], sourceStationLon, sourceStationLat);
         console.log(station.distance)
          
